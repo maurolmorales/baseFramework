@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estillos_form.css" />
+    <link rel="stylesheet" href="./css/standard.css" />
+    <title>Estilos Form</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="">
+          <div>
+            Texto:
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre completo"
+              required
+              minlength="3"
+              maxlength="50"
+              pattern="[A-Za-z\s]+"
+            />
+            Disabled:
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre"
+              disabled
+            />
+            Read Only:
+            <input
+              type="text"
+              name="codigoPostal"
+              id="codigoPostal"
+              value="12345"
+              readonly
+            />
+            Autofocus:
+            <input
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="Usuario"
+              autofocus
+            />
+            Data List:
+            <input list="browsers" />
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+          </div>
+          <div>
+            Numérico:
+            <input
+              type="number"
+              name="cantidad"
+              id="cantidad"
+              placeholder="Cantidad"
+              min="1"
+              max="100"
+              step="1"
+            />
+          </div>
+          <div>
+            Radio:
+            <label for="male">
+              <input type="radio" name="genero" id="male" value="masculino" />
+              Masculino
+            </label>
+            <label for="female">
+              <input type="radio" name="genero" id="female" value="femenino" />
+              Femenino
+            </label>
+          </div>
+          <div>
+            Checkbox:
+            <input
+              type="checkbox"
+              name="suscripcion"
+              id="suscripcion"
+              checked
+            />
+            Suscribirse al boletín
+          </div>
+          <div>
+            Oculto:
+            <input type="hidden" name="codigoSecreto" value="123456" />
+          </div>
+          <div>
+            color:
+            <input
+              type="color"
+              name="colorFavorito"
+              id="colorFavorito"
+              value="#ff0000"
+            />
+          </div>
+          <div>
+            Password:
+            <input
+              type="password"
+              name="contrasena"
+              id="contrasena"
+              placeholder="Contraseña"
+              required
+              minlength="8"
+            />
+          </div>
+          <div>
+            Mail:
+            <input
+              type="email"
+              name="correo"
+              id="correo"
+              placeholder="Correo electrónico"
+              required
+            />
+          </div>
+          <div>
+            Teléfono:
+            <input
+              type="tel"
+              name="numeroTelefono"
+              id="numeroTelefono"
+              placeholder="Número de teléfono"
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <div>
+            Url:
+            <input
+              type="url"
+              name="sitioWeb"
+              id="sitioWeb"
+              placeholder="URL del sitio web"
+            />
+          </div>
+          <div>
+            Rango:
+            <input
+              type="range"
+              name="volumen"
+              id="volumen"
+              min="0"
+              max="100"
+              step="1"
+              value="50"
+            />
+          </div>
+          <div>
+            Submit:
+            <input type="submit" value="Enviar formulario" />
+          </div>
+          <div>
+            Reset:
+            <input type="reset" value="Restablecer formulario" />
+          </div>
+          <div>
+            Botón:
+            <input
+              type="button"
+              value="Hacer algo"
+              onclick="alert('¡Botón presionado!')"
+            />
+          </div>
+          <div>
+            Búsqueda:
+            <input
+              type="search"
+              name="busqueda"
+              id="busqueda"
+              placeholder="Buscar..."
+            />
+          </div>
+          <div>
+            Fecha:
+            <input
+              type="date"
+              name="fechaNacimiento"
+              id="fechaNacimiento"
+              min="2000-01-02"
+              max="1979-12-31"
+              required
+            />
+          </div>
+          <div>
+            Mes:
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth" />
+          </div>
+          <div>
+            Semana:
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week" />
+          </div>
+          <div>
+            Datetime-local:
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input
+              type="datetime-local"
+              id="birthdaytime"
+              name="birthdaytime"
+            />
+          </div>
+          <div>
+            Time:
+            <label for="appt">Select a time:</label>
+            <input type="time" id="appt" name="appt" />
+          </div>
+          <div>
+            Archivo:
+            <input
+              type="file"
+              name="archivo"
+              id="archivo"
+              accept=".jpg, .jpeg, .png"
+            />
+          </div>
+          <div>
+            Image:
+            <input
+              type="image"
+              src="img_submit.gif"
+              alt="Submit"
+              width="48"
+              height="48"
+            />
+          </div>
+          <div>
+            Select:
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="4" multiple>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div>
+            optgroup:
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            TextArea:
+            <textarea name="message" rows="10" cols="30">
+              The cat was playing in the garden.
+              </textarea
+            >
+          </div>
+          <div>
+            Button:
+            <button type="button" onclick="alert('Hello World!')">
+              Click Me!
+            </button>
+          </div>
+          <div>
+            Fieldset:
+            <fieldset>
+              <legend>Personalia:</legend>
+              <label for="fname">First name:</label><br />
+              <input type="text" id="fname" name="fname" value="John" /><br />
+              <label for="lname">Last name:</label><br />
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                value="Doe"
+              /><br /><br />
+              <input type="submit" value="Submit" />
+            </fieldset>
+          </div>
+        </form>
+      </section>
+      <section>
+        <h3>Attribute Description</h3>
+        <ol>
+          <li>
+            <strong>checked:</strong> Specifies that an input field should be
+            pre-selected when the page loads (for type="checkbox" or
+            type="radio")
+          </li>
+          <li>
+            <strong>disabled:</strong> Specifies that an input field should be
+            disabled
+          </li>
+          <li>
+            <strong>max:</strong> Specifies the maximum value for an input field
+          </li>
+          <li>
+            <strong>maxlength:</strong> Specifies the maximum number of
+            character for an input field
+          </li>
+          <li>
+            <strong>min:</strong> Specifies the minimum value for an input field
+          </li>
+          <li>
+            <strong>pattern:</strong> Specifies a regular expression to check
+            the input value against
+          </li>
+          <li>
+            <strong>readonly:</strong> Specifies that an input field is read
+            only (cannot be changed)
+          </li>
+          <li>
+            <strong>required:</strong> Specifies that an input field is required
+            (must be filled out)
+          </li>
+          <li>
+            <strong>size:</strong> Specifies the width (in characters) of an
+            input field
+          </li>
+          <li>
+            <strong>step:</strong> Specifies the legal number intervals for an
+            input field
+          </li>
+          <li>
+            <strong>value:</strong> Specifies the default value for an input
+            field
+          </li>
+          <li>
+            <strong>multiple:</strong> The input multiple attribute specifies
+            that the user is allowed to enter more than one value in an input
+            field.
+          </li>
+          <li><strong>Title:</strong></li>
+          <li><strong>Automplete:</strong></li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
